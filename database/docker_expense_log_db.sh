@@ -1,0 +1,1 @@
+docker run --name postgres_expense_log_db -e POSTGRES_PASSWORD=secret@123 -d --restart unless-stopped -p 5436:5432 -v $HOME/tools/docker/volumes/postgres_expense_log_db:/var/lib/postgresql/data postgres:16.2-alpine
