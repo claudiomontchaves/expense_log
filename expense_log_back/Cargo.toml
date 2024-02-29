@@ -11,9 +11,11 @@ axum = { version = "0.7.4" }
 axum-extra = { version = "0.9.2", features = ["typed-header"] }
 serde = "1.0.196"
 serde_with = "3.6.1"
+serde_json = "1.0.114"
 tokio = { version = "1.36.0", features = ["full"] }
 sqlx = { version = "0.7.3", features = [
     "runtime-tokio-rustls",
     "postgres",
     "chrono",
 ] }
+chrono = "0.4.34"
