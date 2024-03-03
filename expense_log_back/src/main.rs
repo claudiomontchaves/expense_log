@@ -6,11 +6,20 @@ pub mod service;
 
 use crate::routes::routes::create_routes;
 use app_properties::AppProperties;
+use env_logger;
 use sqlx::postgres::PgPoolOptions;
+use std::env;
 
 #[tokio::main]
 async fn main() {
     let app_props = AppProperties::new();
+
+    let sqlx_log = app_props.get("sqlx_log");
+    if sqlx_log == "true" {
+        env::set_var("RUST_LOG", "sqlx=debug");
+    }
+    env_logger::init();
+
     let server_address = format!("0.0.0.0:{}", app_props.get("server_port"));
     let max_connections = app_props.get("db_max_connections").parse::<u32>().unwrap();
     let db_uri = prepare_db_uri(app_props);

@@ -4,5 +4,5 @@ use serde::{Deserialize, Serialize};
 pub struct ExpenseType {
     pub id: i32,
     pub title: String,
-    pub description: String,
+    pub description: Option<String>,
 }

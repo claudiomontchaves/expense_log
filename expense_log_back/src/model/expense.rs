@@ -6,6 +6,6 @@ pub struct Expense {
     pub expense_date: String,
     pub expense_type_id: i32,
     pub amount: f32,
-    pub description: String,
+    pub description: Option<String>,
     pub app_user_id: i32,
 }
