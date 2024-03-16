@@ -43,7 +43,7 @@ create table expense_alert (
 ------------------------------------------
 
 INSERT INTO app_user (id, username, email, "password", admin_user) VALUES(nextval('app_user_id_seq'::regclass), 'Mickey Mouse', 'mickey.mouse@cartoon.net', '123', true);
-INSERT INTO app_user (id, username, email, "password", admin_user) VALUES(nextval('app_user_id_seq'::regclass), 'Donal Duck', 'donal.duck@cartoon.net', '123', false);
+INSERT INTO app_user (id, username, email, "password", admin_user) VALUES(nextval('app_user_id_seq'::regclass), 'Donald Duck', 'donald.duck@cartoon.net', '123', false);
 
 INSERT INTO expense_type (id, title, description) VALUES(nextval('expense_type_id_seq'::regclass), 'Electricity', '');
 INSERT INTO expense_type (id, title, description) VALUES(nextval('expense_type_id_seq'::regclass), 'Heating', '');

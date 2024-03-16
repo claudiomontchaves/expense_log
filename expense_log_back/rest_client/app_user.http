@@ -1,0 +1,37 @@
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MDEwMzc0MTUsImlhdCI6MTcwMTAzMzgxNX0.YnMQqvP0fpKcSSZwGbP6zWhyREPXlEFChcn5lGRV8is
+
+### GET ALL APP USER
+GET http://127.0.0.1:8085/app_user?order_by=id&sort_order=ASC HTTP/1.1
+Content-type: application/json
+
+### GET APP USER BY ID
+GET http://127.0.0.1:8085/app_user/3  HTTP/1.1
+Content-type: application/json
+
+### CREATE APP USER
+POST http://127.0.0.1:8085/app_user  HTTP/1.1
+Content-type: application/json
+
+{
+    "id": 0,
+    "username": "Goofy",
+    "email": "goofy@cartoon.net",
+    "password": "goofy123",
+    "admin_user": false
+}
+
+### UPDATE APP USER
+PUT http://127.0.0.1:8085/app_user/3  HTTP/1.1
+Content-type: application/json
+
+{
+    "id": 3,
+    "username": "Goofy",
+    "email": "goofy@cartoon.net",
+    "password": "goofy124563",
+    "admin_user": false
+}
+
+### DELETE APP USER
+DELETE http://127.0.0.1:8085/app_user/3  HTTP/1.1
+Content-type: application/json

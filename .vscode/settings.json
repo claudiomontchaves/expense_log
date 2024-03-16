@@ -2,6 +2,7 @@
   "rust-analyzer.linkedProjects": [
     "./expense_log_back/Cargo.toml",
     "./expense_log_back/Cargo.toml",
+    "./expense_log_back/Cargo.toml",
     "./expense_log_back/Cargo.toml"
-]
+  ]
 }
